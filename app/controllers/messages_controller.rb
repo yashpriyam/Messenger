@@ -4,8 +4,8 @@ class MessagesController < ApplicationController
   end
 
   def index
-    @messages = @Conversation.messages
-    @message = @Conversation.messages.new
+    @messages = @conversation.messages
+    @message = @conversation.messages.new
   end
   def new
     @message = @conversation.messages.new
@@ -13,7 +13,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = @conversation.messages.new(message_params)
-    if message.save
+    if @message.save
       redirect_to conversation_messages_path(@conversation)
     end
   end
