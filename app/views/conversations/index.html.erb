@@ -13,6 +13,7 @@
     <li><button type="button" class="list-group-item"
     data-toggle="collapse" data-target="#new"><h4>New Message
       <i class="glyphicon glyphicon-new-window" style="vertical-align:right;"></i></h4></button></li>
+    <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
   </ul>
 </div>
 <h1>My Inbox</h1>
